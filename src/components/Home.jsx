@@ -53,8 +53,8 @@ const Home = ({ refs }) => {
                         />
                     </motion.div>
                 </div>
-                <div  className='mx-auto text-xl font-fira text-center'>
-                    <motion.p initial={{opacity:0, filter:'blur(10px)',y:20}} animate={{opacity:1, filter:'blur(0px)', y:0}} transition={{type:'spring', delay:0.4, duration:1}}>I’m a passionate front-end web developer and  designer from Bangladesh. you can check out my <div className='group inline-block'><a className='italic' target='_blank' href="https://github.com/sayeed-dev-07">github</a>
+                <div className='mx-auto text-xl font-fira text-center'>
+                    <motion.p initial={{ opacity: 0, filter: 'blur(10px)', y: 20 }} animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }} transition={{ type: 'spring', delay: 0.4, duration: 1 }}>I’m a passionate front-end web developer and  designer from Bangladesh. you can check out my <div className='group inline-block'><a className='italic' target='_blank' href="https://github.com/sayeed-dev-07">github</a>
                         <div><div className={`w-0 duration-300 group-hover:w-[90%] transition-all  bg-[#F8F4E3] h-[0.03rem]`}></div></div></div> or scroll down to see my projects.</motion.p>
                 </div>
             </motion.div>

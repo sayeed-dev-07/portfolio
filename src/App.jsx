@@ -4,22 +4,21 @@ import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
-import Noise from './components/Noise';
-
-import Lenis from 'lenis'
-
+import Lenis from 'lenis';
 
 const App = () => {
+  const lenisRef = useRef(null);
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,       // smoothness
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing curve
-      smoothWheel: true,   // smooth mousewheel
-      smoothTouch: false,  // optional for mobile
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
     });
 
-    // Update lenis and sync with Framer Motion’s RAF
+    lenisRef.current = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -36,18 +35,20 @@ const App = () => {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+
   const handleScroll = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
-    console.log('clicked');
-  }
+    if (lenisRef.current && ref.current) {
+      lenisRef.current.scrollTo(ref.current);
+    }
+  };
+
   return (
-    <div className='h-auto bg-[#0b0e11]'>
+    <div className="h-auto bg-[#0b0e11]">
       <Navbar func={handleScroll} refs={{ homeRef, aboutRef, projectsRef, contactRef }} />
       <Home refs={homeRef} />
       <About refs={aboutRef} />
       <Project refs={projectsRef} />
       <Contact refs={contactRef} />
-
     </div>
   );
 };
