@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import TextPressure from './TextPressure';
+import { delay } from 'motion';
 
 const Navbar = ({ func, refs }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,9 @@ const Navbar = ({ func, refs }) => {
             transition: {
                 type: 'spring',
                 stiffness: 400,
-                damping: 40
-            }
+                damping: 40,
+            },
+            
         },
         open: {
             x: 0,
@@ -32,10 +34,10 @@ const Navbar = ({ func, refs }) => {
     };
 
     const menuItemVariants = {
-        closed: { x: 50, opacity: 0 },
+        closed: { x: 50, opacity:0},
         open: (i) => ({
             x: 0,
-            opacity: 1,
+            opacity:1,
             transition: {
                 delay: i * 0.1,
                 duration: 0.4,
@@ -51,7 +53,7 @@ const Navbar = ({ func, refs }) => {
 
     return (
         <>
-            <div className='flex items-center z-50 fixed text-[#F8F4E3] bg-[#0b0e11] w-full top-0 justify-between px-[5%] py-6 border-b'>
+            <div className='flex items-center z-60 h-[10vh] fixed font-fira text-[#F8F4E3] bg-[#0b0e11] w-full top-0 justify-between px-[5%] py-6 border-b'>
                 <motion.div 
                     initial={{ x: '-40vw', filter: 'blur(10px)' }} 
                     animate={{ x: '0', filter: 'blur(0px)' }} 
@@ -77,7 +79,7 @@ const Navbar = ({ func, refs }) => {
                     initial={{ x: '40vw', filter: 'blur(10px)' }} 
                     animate={{ x: '0', filter: 'blur(0px)' }} 
                     transition={{ duration: 0.7, delay: 0.2, type: 'spring' }} 
-                    className='lg:flex items-center justify-center font-outfit text-2xl gap-x-5 hidden'
+                    className='lg:flex items-center justify-center  text-2xl gap-x-5 hidden'
                 >
                     <div className='group cursor-pointer'>
                         <motion.a onClick={() => func(refs.homeRef)}>Home</motion.a>
@@ -102,7 +104,7 @@ const Navbar = ({ func, refs }) => {
                     animate={{ x: '0', filter: 'blur(0px)' }}
                     transition={{ duration: 0.7, delay: 0.2, type: 'spring' }}
                     onClick={toggleMenu}
-                    className='lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50'
+                    className='lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-70'
                     aria-label="Toggle menu"
                 >
                     <motion.span
@@ -132,14 +134,14 @@ const Navbar = ({ func, refs }) => {
                             animate="open"
                             exit="closed"
                             onClick={toggleMenu}
-                            className='fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden'
+                            className='fixed inset-0  bg-black/60 backdrop-blur-sm z-30 lg:hidden'
                         />
                         <motion.div
                             variants={menuVariants}
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className='fixed top-0 right-0 h-full w-[70%] sm:w-[50%] md:w-[40%] bg-[#0b0e11] border-l border-[#F8F4E3]/20 z-40 lg:hidden flex flex-col items-start justify-center px-10 gap-8'
+                            className='fixed top-0 right-0 h-full w-[70%] sm:w-[50%] md:w-[40%] bg-[#0b0e11] border-l border-[#F8F4E3]/20 z-30 lg:hidden flex flex-col items-start justify-center px-10 gap-8'
                         >
                             {['Home', 'About', 'Projects', 'Contact'].map((item, index) => (
                                 <motion.div
@@ -149,11 +151,11 @@ const Navbar = ({ func, refs }) => {
                                     initial="closed"
                                     animate="open"
                                     exit="closed"
-                                    className='group cursor-pointer'
+                                    className='group  cursor-pointer'
                                     onClick={() => handleNavClick(refs[`${item.toLowerCase()}Ref`])}
                                 >
                                     <motion.a 
-                                        className='font-outfit text-3xl sm:text-4xl text-[#F8F4E3]'
+                                        className='font-outfit  text-3xl sm:text-4xl text-[#F8F4E3]'
                                         whileHover={{ x: 10 }}
                                         transition={{ duration: 0.2 }}
                                     >

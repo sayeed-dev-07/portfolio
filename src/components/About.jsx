@@ -8,12 +8,12 @@ const About = ({ refs }) => {
         target: refs,
         offset: ['start end', 'end start']
     })
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300])
+    const y = useTransform(scrollYProgress, [0, 1], [-200, 200])
     const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0])
 
     return (
 
-        <div ref={refs} className='min-h-screen   flex items-center justify-center flex-col lg:flex-row w-[90vw] gap-x-10 mx-auto gap-y-20'>
+        <div ref={refs} className='min-h-screen flex items-center justify-center flex-col lg:flex-row w-[90vw] gap-x-10 mx-auto gap-y-20'>
             <motion.div style={{ y, opacity }} className='text-[#F8F4E3] font-fira w-full lg:w-[40%] flex flex-col gap-y-6'>
                 <div className=''>
                     <p className='uppercase'>Read More</p>

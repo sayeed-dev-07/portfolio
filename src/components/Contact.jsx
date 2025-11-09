@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 const Contact = ({ refs }) => {
     return (
-        <div ref={refs} className='text-[#F8F4E3] flex min-h-screen pt-[10%] font-fira pb-10 px-[5%] sm:items-end items-center gap-y-12 justify-end sm:justify-end relative flex-col '>
+        <div ref={refs} className='text-[#F8F4E3] z-20  flex min-h-screen pt-[10%] font-fira pb-10 px-[5%] sm:items-end items-center gap-y-12 justify-end sm:justify-end relative flex-col '>
             <motion.div initial={{ opacity: 0, filter: 'blur(10px)', y: -20 }} whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }} transition={{ type: 'spring', delay: 0.2, duration: 1 }} className='sm:absolute lg:top-[20%] top-[30%] left-[10%] text-center sm:text-start'>
                 <p className='capitalize text-6xl font-semibold'>Contact me</p>
                 <p className='uppercase text-2xl'>Let’s get in touch!</p>
@@ -36,7 +36,7 @@ const Contact = ({ refs }) => {
                 </div>
                 <div>
                     <motion.a href='https://github.com/sayeed-dev-07' target='_blank'
-                            className="relative px-8  cursor-pointer font-fira text-2xl font-semibold text-[#F8F4E3] bg-transparent overflow-hidden"
+                            className="relative px-3  cursor-pointer font-fira text-2xl font-semibold text-[#F8F4E3] bg-transparent overflow-hidden"
                             whileHover="hover"
                             initial="initial"
                         >
@@ -58,7 +58,7 @@ const Contact = ({ refs }) => {
                             />
                         </motion.a>
                         <motion.a href='https://www.linkedin.com/in/sayeed-shorif-68080234b/' target='_blank'
-                            className="relative px-8  cursor-pointer font-fira text-2xl font-semibold text-[#F8F4E3] bg-transparent overflow-hidden"
+                            className="relative px-3  cursor-pointer font-fira text-2xl font-semibold text-[#F8F4E3] bg-transparent overflow-hidden"
                             whileHover="hover"
                             initial="initial"
                         >

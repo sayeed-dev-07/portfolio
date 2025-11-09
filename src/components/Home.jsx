@@ -30,7 +30,7 @@ const Home = ({ refs }) => {
         visible: { y: 0, opacity: 1, filter: "blur(0px)" },
     };
     return (
-        <div ref={refs} className='min-h-screen w-full flex items-center justify-center'>
+        <div ref={refs} className='min-h-screen  w-full flex items-center justify-center'>
             <motion.div className='text-[#F8F4E3] w-full sm:w-[70%] lg:w-[55%] xl:w-[37%] overflow-hidden md:overflow-visible justify-center gap-y-12 md:px-0 px-4 mx-auto  flex flex-col sm:items-start items-center'>
                 <div>
                     <motion.p style={{ x: translateContent }} variants={container} initial='hidden' animate='visible' className='uppercase font-fira text-2xl'>{

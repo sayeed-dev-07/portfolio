@@ -1,8 +1,16 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 const Card = ({ data }) => {
+
+    const refs = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: refs,
+        offset: ['start end', 'end start']
+    });
+    const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0,  1,  0])
     return (
-        <div className='font-fira  text-[#F8F4E3] sm:p-5'>
+
+        <motion.div ref={refs} style={{ opacity }} className='font-fira  text-[#F8F4E3] sm:p-5'>
             <div className='flex flex-col gap-y-5'>
                 <motion.div className='flex flex-col gap-y-3' initial={{ filter: 'grayscale(100%)', scale: 1 }} whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }} transition={{
                     type: "spring",
@@ -71,7 +79,7 @@ const Card = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

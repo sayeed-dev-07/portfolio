@@ -46,10 +46,12 @@ const App = () => {
   return (
     <div className="h-auto bg-[#0b0e11]">
       <Navbar func={handleScroll} refs={{ homeRef, aboutRef, projectsRef, contactRef }} />
-      <Home refs={homeRef} />
-      <About refs={aboutRef} />
-      <Project refs={projectsRef} />
-      <Contact refs={contactRef} />
+      <div className='pt-[10vh]'>
+        <Home refs={homeRef} />
+        <About refs={aboutRef} />
+        <Project refs={projectsRef} />
+        <Contact refs={contactRef} />
+      </div>
     </div>
   );
 };
