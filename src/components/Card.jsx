@@ -14,8 +14,8 @@ const Card = ({ data }) => {
             <div className='flex flex-col gap-y-5'>
                 <motion.div className='flex flex-col gap-y-3' initial={{ filter: 'grayscale(100%)', scale: 1 }} whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }} transition={{
                     type: "spring",
-                    stiffness: 400,
-                    damping: 10, duration: 0.2
+                    stiffness: 500,
+                    damping: 15, duration: 0.2
                 }}>
                     <div className=''>
                         <motion.img src={data.img} alt={data.name} />

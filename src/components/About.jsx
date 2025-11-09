@@ -24,8 +24,12 @@ const About = ({ refs }) => {
             </motion.div>
             <div className='lg:w-[40%] md:flex-1 xl:max-w-[30%] group transition-all duration-300 scale-100 hover:scale-105'>
                 <div className=''>
-                    <img
-                        className='grayscale-0 w-full'
+                    <motion.img initial={{ filter: 'grayscale(100%)', scale: 1 }} whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }} transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 10, duration: 0.2
+                }}
+                        className='w-full'
                         src="https://i.pinimg.com/736x/0a/01/04/0a0104b34d90ef354feff46d759b7e29.jpg"
                         alt=""
                     />
