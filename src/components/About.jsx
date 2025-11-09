@@ -23,25 +23,7 @@ const About = ({ refs }) => {
                 <p className='text-xl'>I love learning new things and technologies and I’m always gathering inspiration and exploring different ideas and techniques. I’m curious and passionate, especially when it comes to art, music and gaming.</p>
             </motion.div>
             <div className='lg:w-[40%] md:flex-1 xl:max-w-[30%] group transition-all duration-300 scale-100 hover:scale-105'>
-
-                <div className='hidden lg:block'>
-                    <ElectricBorder
-                        color="#7df9ff"
-                        speed={1}
-                        chaos={0.5}
-                        thickness={2}
-                        style={{ borderRadius: 16 }}
-                    >
-                        <img
-                            className='grayscale-100 group-hover:grayscale-0 '
-                            src="https://i.pinimg.com/736x/0a/01/04/0a0104b34d90ef354feff46d759b7e29.jpg"
-                            alt=""
-                        />
-                    </ElectricBorder>
-                </div>
-
-                
-                <div className='lg:hidden'>
+                <div className=''>
                     <img
                         className='grayscale-0 w-full'
                         src="https://i.pinimg.com/736x/0a/01/04/0a0104b34d90ef354feff46d759b7e29.jpg"
