@@ -40,12 +40,12 @@ const data = [
         img: 'https://i.pinimg.com/736x/35/2b/b7/352bb790d45e7c4f7d5a2a4e0c70fd43.jpg'
     },
     {
-        name : 'Trafalgar',
-        des: 'This project is a UI-only doctor-finding platform built entirely with HTML and raw CSS. It allows users to search, browse, and view doctor profiles in a clean, modern interface. The focus is purely on frontend design, demonstrating skills in HTML layout, CSS styling, responsive design, and interactive components.',
-        code: 'https://github.com/sayeed-dev-07/BDC-Assignment-01',
-        live: 'https://sayeed-dev-07.github.io/BDC-Assignment-01/',
+        name : 'MEDIGO',
+        des: 'MediGo is a smart doctor-finding platform that helps users book trusted healthcare professionals easily and quickly.',
+        code: 'https://github.com/sayeed-dev-07/medigo-web-react.git',
+        live: 'https://medigo-web-react.vercel.app/',
         tech: ['Tailwind CSS', 'Responsive Design', 'Transitions'],
-        img: 'https://i.pinimg.com/1200x/41/50/bc/4150bc08cb3a57fb8dddfc7302ab3408.jpg'
+        img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470'
     }
 ]
 export default data;
