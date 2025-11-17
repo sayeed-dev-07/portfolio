@@ -1,5 +1,13 @@
 const data = [
     {
+        name : 'ZenManga',
+        des: 'ZenManga is a fully responsive single-page manga library built with smooth page transitions and interactive UI animations powered by Framer Motion. It supports dynamic routing and data fetching, allowing users to browse and sort manga with ease. Users can view detailed manga pages, explore author information, add titles to favourites, and manage their shopping cart—all inside a fast, animated, and seamless SPA experience',
+        code: 'https://github.com/sayeed-dev-07/zenmanga.git',
+        live: 'https://zenmanga.vercel.app/',
+        tech: ['Tailwind CSS', 'Responsive Design', 'Framer Motion', 'React', 'React Query', 'Routing'],
+        img: 'https://images.unsplash.com/photo-1709675577966-6231e5a2ac43?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    },
+    {
         name : 'Memory Game',
         des: 'A fun and challenging front-end memory game that fetches images dynamically from an API. Players must click each image only once — if they click the same image twice, the game ends! After every correct click, the cards shuffle randomly to test the player’s memory and focus',
         code: 'https://github.com/sayeed-dev-07/top-memory-card-project.git',
@@ -31,14 +39,7 @@ const data = [
         tech: ['React', 'Vite', 'Tailwind CSS', 'Routing', 'Restful API', 'Responsive Design'],
         img: 'https://i.pinimg.com/1200x/f6/e9/8b/f6e98b7de8442ce6d38d10a86fb3f130.jpg'
     },
-    {
-        name : 'Aphrodite',
-        des: 'Aphrodite is a responsive doctor booking website UI designed with Tailwind CSS. Users can search for doctors, view profiles, and book appointments. The focus is on clean design, responsive layouts',
-        code: 'https://github.com/sayeed-dev-07/assigment-2',
-        live: 'https://sayeed-dev-07.github.io/assigment-2/',
-        tech: ['Tailwind CSS', 'Responsive Design', 'Transitions'],
-        img: 'https://i.pinimg.com/736x/35/2b/b7/352bb790d45e7c4f7d5a2a4e0c70fd43.jpg'
-    },
+    
     {
         name : 'MEDIGO',
         des: 'MediGo is a smart doctor-finding platform that helps users book trusted healthcare professionals easily and quickly.',
